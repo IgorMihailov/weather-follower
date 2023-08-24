@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Sign up</h1>
+    <form action="#" th:action="@{/create-user}" th:object="${userProfile}" method="post">
+        <label for="email">e-mail</label>
+        <input id="email" type="text" th:field="*{login}">
+        <label for="password">password</label>
+        <input id="password" type="password" th:field="*{password}">
+        <input type="submit" value="Sign up">
+    </form>
+
+    <form action="#" th:action="@{/sign-in}"  method="post">
+        <input type="submit" value="Sign in">
+    </form>
+</body>
+</html>

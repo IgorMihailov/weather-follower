@@ -1,7 +1,7 @@
 pipeline {
     agent any
   environment {
-    MAVEN_ARGS=" -e clean install"
+    MAVEN_ARGS = " -e clean install"
     registry = ""
     dockerContainerName = 'weather_api'
     dockerImageName = 'weather_api_img'
@@ -9,9 +9,7 @@ pipeline {
   stages {
     stage('Build') {
        steps {
-   withMaven(maven: 'MAVEN_ENV') {
             sh "mvn ${MAVEN_ARGS}"
-        }
        }
     }
 
